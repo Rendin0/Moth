@@ -9,7 +9,7 @@ Arrow::Arrow(float length)
 
 	triangle = sf::CircleShape(5, 3);
 	triangle.rotate(90);
-	triangle.setOrigin(sf::Vector2f(triangle.getRadius(), line.getSize().x));
+	triangle.setOrigin(sf::Vector2f(triangle.getRadius() + 0.5, line.getSize().x));
 	triangle.setOutlineThickness(0.8f);
 	triangle.setFillColor(sf::Color::Transparent);
 	triangle.setOutlineColor(sf::Color(0, 0, 0));
@@ -38,7 +38,7 @@ void Arrow::move(sf::Vector2f vect2f)
 void Arrow::setOrigin(sf::Vector2f vect2f)
 {
 	line.setOrigin(vect2f);
-	triangle.setOrigin(vect2f);
+	triangle.setOrigin(line.getOrigin() + sf::Vector2f(triangle.getRadius() + 0.5, line.getSize().x));
 }
 
 void Arrow::setPosition(sf::Vector2f vec2f)

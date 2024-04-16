@@ -13,6 +13,7 @@ public:
 
 	Arrow& getArrow(size_t index);
 
+
 	void rotateArrow(size_t index, float angle);
 	void moveArrow(size_t index, sf::Vector2f cords);
 	void setPositionArrow(size_t index, sf::Vector2f cords);

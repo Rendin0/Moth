@@ -2,12 +2,23 @@
 
 Plane::Plane()
 {
-	arrows = { Arrow(800.f) };
+	arrows = {};
 }
 
 void Plane::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
 	states.transform *= getTransform();
+
+	Arrow x_axis(target.getSize().x - 10);
+	Arrow y_axis(target.getSize().y - 10);
+
+	x_axis.move(sf::Vector2f(0, target.getSize().y / 2));
+	y_axis.move(sf::Vector2f(target.getSize().x / 2, target.getSize().y));
+
+	y_axis.rotate(-90);
+
+	target.draw(x_axis, states);
+	target.draw(y_axis, states);
 
 	for (const Arrow& i : arrows)
 		target.draw(i, states);
