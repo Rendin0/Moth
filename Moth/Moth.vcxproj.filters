@@ -19,24 +19,42 @@
     <Filter Include="Файлы заголовков\Objects">
       <UniqueIdentifier>{c3019014-ec16-4cae-a959-68323800da4b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Main">
+      <UniqueIdentifier>{1c96d181-ff42-4e30-b310-bd4c5078a29f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Main">
+      <UniqueIdentifier>{c7ef3d26-73f4-424b-ad0c-b4f1fc8f6032}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Vulcan">
+      <UniqueIdentifier>{1890d02f-cf58-4cb0-a434-20494f19d587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Vulcan">
+      <UniqueIdentifier>{4585c767-7bd9-4438-a0ae-a9b820e756ed}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="plane.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="arrow.cpp">
       <Filter>Исходные файлы\Objects</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Исходные файлы\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="plane.cpp">
+      <Filter>Исходные файлы\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Vulkan.cpp">
+      <Filter>Исходные файлы\Vulcan</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="plane.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="arrow.h">
       <Filter>Файлы заголовков\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="plane.h">
+      <Filter>Файлы заголовков\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="vulkan.h">
+      <Filter>Файлы заголовков\Vulcan</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

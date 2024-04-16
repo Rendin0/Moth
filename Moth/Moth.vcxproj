@@ -104,12 +104,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Repin_aw53\Additional libs\SFML-2.6.1\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>O:\Visual Studio\Libs\SFML-2.6.1\include;O:\Visual Studio\Projects\Moth\Moth\vulkan.h</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Repin_aw53\Additional libs\SFML-2.6.1\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>O:\Visual Studio\Libs\SFML-2.6.1\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -133,10 +133,12 @@
     <ClCompile Include="arrow.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="plane.cpp" />
+    <ClCompile Include="Vulkan.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="arrow.h" />
     <ClInclude Include="plane.h" />
+    <ClInclude Include="vulkan.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
