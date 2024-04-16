@@ -2,7 +2,7 @@
 
 Plane::Plane()
 {
-	arrows = { Arrow(500.f) };
+	arrows = { Arrow(800.f) };
 }
 
 void Plane::draw(sf::RenderTarget& target, sf::RenderStates states) const
