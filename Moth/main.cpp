@@ -5,7 +5,8 @@
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(1920, 1080), "Moth");
+	sf::WindowBase window(sf::VideoMode(1920, 1080), "Moth");
+	//window.createVulkanSurface();
 	window.setFramerateLimit(80);
 
 	sf::Event event;
