@@ -2,22 +2,41 @@
 
 Plane::Plane()
 {
-	arrows = {};
+	arrows = { Arrow(500.f) };
 }
 
 void Plane::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
 	states.transform *= getTransform();
 
-	sf::RectangleShape axis(sf::Vector2f(800, 0));
-	axis.setOutlineThickness(0.5f);
-	axis.setOutlineColor(sf::Color(0, 0, 0));
-	axis.setFillColor(sf::Color::Transparent);
-	axis.setOrigin(0.f, -400.f);
-	target.draw(axis, states);
-
-	axis.setRotation(90);
-	axis.setOrigin(0.f, 400.f);
-	target.draw(axis, states);
+	for (const Arrow& i : arrows)
+		target.draw(i, states);
 }
+
+Arrow& Plane::getArrow(size_t index)
+{
+	return arrows.at(index);
+}
+
+void Plane::rotateArrow(size_t index, float angle)
+{
+	arrows.at(index).rotate(angle);
+}
+
+void Plane::moveArrow(size_t index, sf::Vector2f cords)
+{
+	arrows.at(index).move(cords);
+}
+
+void Plane::setPositionArrow(size_t index, sf::Vector2f cords)
+{
+	arrows.at(index).setPosition(cords);
+}
+
+void Plane::setOriginArrow(size_t index, sf::Vector2f cords)
+{
+	arrows.at(index).setOrigin(cords);
+}
+
+
 
